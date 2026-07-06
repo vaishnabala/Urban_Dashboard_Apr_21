@@ -1,59 +1,20 @@
-# Core GIS
-osmnx
+# GIS and Spatial
 geopandas
 shapely
 pyproj
 rasterio
 fiona
+osmnx
 
-# Database
-sqlalchemy
-geoalchemy2
-psycopg2-binary
-alembic
-
-# API
-fastapi
-uvicorn[standard]
-pydantic
-pydantic-settings
-httpx
-
-# Data Processing
-pandas
-numpy
-
-# Real-time & Scheduling
-requests
-apscheduler
-
-# ML / Analytics
-scikit-learn
-joblib
-
-# Dashboard
+# Core App Stack & Web
 streamlit
 streamlit-folium
 folium
 plotly
 pydeck
-
-# Utilities
-python-dotenv
-loguru
-
-# Testing
-pytest
-pytest-cov
-
-# Code Quality
-ruff
-
-
-pydantic-settings
-
-streamlit 
-folium 
-streamlit-folium 
-plotly 
 requests
+pydantic
+pydantic-settings
+sqlalchemy
+geoalchemy2
+psycopg2-binary
