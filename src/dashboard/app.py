@@ -2,6 +2,45 @@
 Urban Intelligence Dashboard — Enhanced Map View
 src/dashboard/app.py
 """
+
+import streamlit as st
+import os
+from datetime import datetime
+
+# Import your existing scheduler function if it contains the main run block
+# Or import the specific fetch functions from your project
+try:
+    from src.scheduler.scheduler import run_pipeline  # Adjust this path based on your function name
+except ImportError:
+    run_pipeline = None
+
+# 1. Load Secrets seamlessly in production
+if "DATABASE_URL" in st.secrets:
+    os.environ["DATABASE_URL"] = st.secrets["DATABASE_URL"]
+    os.environ["TOMTOM_API_KEY"] = st.secrets["TOMTOM_API_KEY"]
+    os.environ["OWM_API_KEY"] = st.secrets["OWM_API_KEY"]
+
+# 2. Free Self-Injected Data Pipeline Engine
+@st.cache_resource(ttl=900) # Automatically triggers every 15 minutes max when visitors load the app
+def trigger_data_collection():
+    if run_pipeline:
+        try:
+            run_pipeline()
+            return f"Data pipeline updated successfully at {datetime.now()}"
+        except Exception as e:
+            return f"Pipeline execution standby: {str(e)}"
+    return "Pipeline path configuration required."
+
+# Run the collection routine right before rendering the charts
+status = trigger_data_collection()
+
+
+
+
+
+
+
+
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))

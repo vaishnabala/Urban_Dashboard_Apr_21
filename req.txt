@@ -1,24 +1,3 @@
-# GIS and Spatial
-geopandas
-shapely
-pyproj
-rasterio
-fiona
-osmnx
-
-# Core App Stack & Web
-streamlit
-streamlit-folium
-folium
-plotly
-pydeck
-requests
-pydantic
-pydantic-settings
-sqlalchemy
-geoalchemy2
-psycopg2-binary
-
 # Core GIS
 osmnx
 geopandas
