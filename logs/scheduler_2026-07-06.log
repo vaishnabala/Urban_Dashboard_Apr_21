@@ -1,0 +1,517 @@
+2026-07-06 21:31:50.337 | INFO     | scheduler:start_scheduler:190 | 
+2026-07-06 21:31:50.337 | INFO     | scheduler:start_scheduler:191 | ╔══════════════════════════════════════════════════════╗
+2026-07-06 21:31:50.337 | INFO     | scheduler:start_scheduler:192 | ║     URBAN INTELLIGENCE — DATA COLLECTION SCHEDULER  ║
+2026-07-06 21:31:50.337 | INFO     | scheduler:start_scheduler:193 | ╚══════════════════════════════════════════════════════╝
+2026-07-06 21:31:50.338 | INFO     | scheduler:start_scheduler:194 | 
+2026-07-06 21:31:50.339 | INFO     | scheduler:start_scheduler:195 |   Study Area:  Sarjapur-Dommasandra-Varthur Belt, Bengaluru
+2026-07-06 21:31:50.339 | INFO     | scheduler:start_scheduler:196 |   Center:      (12.905, 77.725)
+2026-07-06 21:31:50.339 | INFO     | scheduler:start_scheduler:197 |   Points:      8 monitoring locations
+2026-07-06 21:31:50.339 | INFO     | scheduler:start_scheduler:198 | 
+2026-07-06 21:31:50.339 | INFO     | scheduler:start_scheduler:199 |   📅 Schedule:
+2026-07-06 21:31:50.339 | INFO     | scheduler:start_scheduler:200 |      🚗 Traffic:      Every 5 minutes
+2026-07-06 21:31:50.339 | INFO     | scheduler:start_scheduler:201 |      🌤️ Weather:      Every 15 minutes
+2026-07-06 21:31:50.339 | INFO     | scheduler:start_scheduler:202 |      🌬️ Air Quality:  Every 30 minutes
+2026-07-06 21:31:50.339 | INFO     | scheduler:start_scheduler:203 |      📊 Stats:        Every 30 minutes
+2026-07-06 21:31:50.340 | INFO     | scheduler:start_scheduler:204 | 
+2026-07-06 21:31:50.340 | INFO     | scheduler:start_scheduler:205 |   📁 Logs:     D:\GitHub_Works\Urban_Dashboard_Apr_21\Urban_Dashboard_Apr_21\logs
+2026-07-06 21:31:50.340 | INFO     | scheduler:start_scheduler:206 |   📁 Backups:  D:\GitHub_Works\Urban_Dashboard_Apr_21\Urban_Dashboard_Apr_21\data\realtime
+2026-07-06 21:31:50.340 | INFO     | scheduler:start_scheduler:207 | 
+2026-07-06 21:31:50.340 | INFO     | scheduler:start_scheduler:208 |   Press Ctrl+C to stop the scheduler.
+2026-07-06 21:31:50.340 | INFO     | scheduler:start_scheduler:209 | 
+2026-07-06 21:31:50.377 | INFO     | scheduler:start_scheduler:277 | 🚀 Scheduler starting NOW...
+2026-07-06 21:31:50.377 | INFO     | scheduler:start_scheduler:278 | 
+2026-07-06 21:31:50.378 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #1 starting...
+2026-07-06 21:31:50.378 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 21:31:50.378 | INFO     | scheduler:job_collect_weather:114 | 🌤️ Weather collection #1 starting...
+2026-07-06 21:31:50.379 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 21:31:50.379 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 21:31:50.379 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 21:31:50.379 | INFO     | realtime_collector:collect_weather:186 | ==================================================
+2026-07-06 21:31:50.379 | INFO     | realtime_collector:collect_weather:187 | COLLECTING WEATHER DATA (OpenWeatherMap)
+2026-07-06 21:31:50.379 | INFO     | scheduler:job_collect_air_quality:135 | 🌬️ Air quality collection #1 starting...
+2026-07-06 21:31:50.379 | INFO     | realtime_collector:collect_weather:188 | ==================================================
+2026-07-06 21:31:50.380 | INFO     | realtime_collector:collect_air_quality:284 | ==================================================
+2026-07-06 21:31:50.380 | INFO     | realtime_collector:collect_weather:201 |   Querying weather for center: (12.905, 77.725)
+2026-07-06 21:31:50.380 | INFO     | realtime_collector:collect_air_quality:285 | COLLECTING AIR QUALITY DATA (OpenWeatherMap)
+2026-07-06 21:31:50.380 | INFO     | realtime_collector:collect_air_quality:286 | ==================================================
+2026-07-06 21:31:50.380 | INFO     | realtime_collector:collect_air_quality:299 |   Querying air quality for center: (12.905, 77.725)
+2026-07-06 21:31:50.611 | DEBUG    | operations:insert_weather_reading:212 | Weather reading inserted (ID: 114)
+2026-07-06 21:31:50.613 | DEBUG    | operations:insert_air_quality_reading:265 | AQI reading inserted (ID: 66)
+2026-07-06 21:31:50.612 | INFO     | realtime_collector:collect_weather:235 |     ✅ Temp: 22.9°C | Humidity: 87% | Wind: 8.31 m/s | Desc: overcast clouds
+2026-07-06 21:31:50.613 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: weather_20260706_213150.json
+2026-07-06 21:31:50.614 | INFO     | realtime_collector:collect_air_quality:342 |     ✅ AQI: 1 (Good) | PM2.5: 3.49 | PM10: 6.51 | NO2: 6.19 | O3: 40.71
+2026-07-06 21:31:50.614 | INFO     | scheduler:job_collect_weather:119 | 🌤️ Weather collection #1 complete: ✅ Success
+2026-07-06 21:31:50.615 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: air_quality_20260706_213150.json
+2026-07-06 21:31:50.615 | INFO     | scheduler:job_collect_air_quality:140 | 🌬️ Air quality collection #1 complete: ✅ Success
+2026-07-06 21:31:51.232 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2351)
+2026-07-06 21:31:51.233 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 31/36 km/h (86.1%) | Congestion ratio: 0.861
+2026-07-06 21:31:51.733 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 21:31:52.386 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2352)
+2026-07-06 21:31:52.386 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:31:52.887 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 21:31:53.552 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2353)
+2026-07-06 21:31:53.553 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:31:54.053 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 21:31:54.884 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2354)
+2026-07-06 21:31:54.884 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 31/36 km/h (86.1%) | Congestion ratio: 0.861
+2026-07-06 21:31:55.385 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 21:31:56.077 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2355)
+2026-07-06 21:31:56.078 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:31:56.578 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 21:31:57.282 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2356)
+2026-07-06 21:31:57.282 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 22/26 km/h (84.6%) | Congestion ratio: 0.846
+2026-07-06 21:31:57.783 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 21:31:58.470 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2357)
+2026-07-06 21:31:58.471 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 21/26 km/h (80.8%) | Congestion ratio: 0.808
+2026-07-06 21:31:58.971 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 21:31:59.676 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2358)
+2026-07-06 21:31:59.677 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/25 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:32:00.178 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_213200.json
+2026-07-06 21:32:00.178 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 21:32:00.179 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #1 complete: 8/8 success
+2026-07-06 21:36:50.379 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #2 starting...
+2026-07-06 21:36:50.379 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 21:36:50.380 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 21:36:50.380 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 21:36:50.381 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 21:36:51.250 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2367)
+2026-07-06 21:36:51.250 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 30/36 km/h (83.3%) | Congestion ratio: 0.833
+2026-07-06 21:36:51.751 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 21:36:52.498 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2368)
+2026-07-06 21:36:52.498 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:36:52.999 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 21:36:53.684 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2369)
+2026-07-06 21:36:53.685 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:36:54.185 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 21:36:55.008 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2370)
+2026-07-06 21:36:55.008 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 30/36 km/h (83.3%) | Congestion ratio: 0.833
+2026-07-06 21:36:55.509 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 21:36:56.167 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2371)
+2026-07-06 21:36:56.167 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:36:56.668 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 21:36:57.310 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2372)
+2026-07-06 21:36:57.311 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 22/26 km/h (84.6%) | Congestion ratio: 0.846
+2026-07-06 21:36:57.811 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 21:36:58.452 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2373)
+2026-07-06 21:36:58.452 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 21/26 km/h (80.8%) | Congestion ratio: 0.808
+2026-07-06 21:36:58.953 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 21:36:59.618 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2374)
+2026-07-06 21:36:59.618 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/25 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:37:00.120 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_213700.json
+2026-07-06 21:37:00.120 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 21:37:00.121 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #2 complete: 8/8 success
+2026-07-06 21:41:50.387 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #3 starting...
+2026-07-06 21:41:50.391 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 21:41:50.395 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 21:41:50.396 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 21:41:50.399 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 21:41:51.427 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2383)
+2026-07-06 21:41:51.428 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 29/36 km/h (80.6%) | Congestion ratio: 0.806
+2026-07-06 21:41:51.928 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 21:41:52.744 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2384)
+2026-07-06 21:41:52.745 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:41:53.247 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 21:41:54.041 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2385)
+2026-07-06 21:41:54.042 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:41:54.543 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 21:41:55.492 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2386)
+2026-07-06 21:41:55.493 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 29/36 km/h (80.6%) | Congestion ratio: 0.806
+2026-07-06 21:41:55.994 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 21:41:56.876 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2387)
+2026-07-06 21:41:56.877 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:41:57.378 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 21:41:58.288 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2388)
+2026-07-06 21:41:58.289 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 23/26 km/h (88.5%) | Congestion ratio: 0.885
+2026-07-06 21:41:58.790 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 21:41:59.612 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2389)
+2026-07-06 21:41:59.612 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 27/27 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:42:00.121 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 21:42:01.299 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2390)
+2026-07-06 21:42:01.300 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/25 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:42:01.804 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_214201.json
+2026-07-06 21:42:01.804 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 21:42:01.815 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #3 complete: 8/8 success
+2026-07-06 21:46:50.378 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #4 starting...
+2026-07-06 21:46:50.379 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 21:46:50.378 | INFO     | scheduler:job_collect_weather:114 | 🌤️ Weather collection #2 starting...
+2026-07-06 21:46:50.379 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 21:46:50.379 | INFO     | realtime_collector:collect_weather:186 | ==================================================
+2026-07-06 21:46:50.380 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 21:46:50.380 | INFO     | realtime_collector:collect_weather:187 | COLLECTING WEATHER DATA (OpenWeatherMap)
+2026-07-06 21:46:50.380 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 21:46:50.380 | INFO     | realtime_collector:collect_weather:188 | ==================================================
+2026-07-06 21:46:50.382 | INFO     | realtime_collector:collect_weather:201 |   Querying weather for center: (12.905, 77.725)
+2026-07-06 21:46:50.771 | DEBUG    | operations:insert_weather_reading:212 | Weather reading inserted (ID: 116)
+2026-07-06 21:46:50.772 | INFO     | realtime_collector:collect_weather:235 |     ✅ Temp: 22.55°C | Humidity: 88% | Wind: 8.31 m/s | Desc: overcast clouds
+2026-07-06 21:46:50.773 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: weather_20260706_214650.json
+2026-07-06 21:46:50.774 | INFO     | scheduler:job_collect_weather:119 | 🌤️ Weather collection #2 complete: ✅ Success
+2026-07-06 21:46:51.462 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2399)
+2026-07-06 21:46:51.462 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 30/36 km/h (83.3%) | Congestion ratio: 0.833
+2026-07-06 21:46:51.963 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 21:46:52.752 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2400)
+2026-07-06 21:46:52.753 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:46:53.254 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 21:46:54.093 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2401)
+2026-07-06 21:46:54.093 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:46:54.594 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 21:46:55.573 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2402)
+2026-07-06 21:46:55.573 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 30/36 km/h (83.3%) | Congestion ratio: 0.833
+2026-07-06 21:46:56.074 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 21:46:56.945 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2403)
+2026-07-06 21:46:56.946 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:46:57.446 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 21:46:58.204 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2404)
+2026-07-06 21:46:58.205 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 23/26 km/h (88.5%) | Congestion ratio: 0.885
+2026-07-06 21:46:58.706 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 21:46:59.566 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2405)
+2026-07-06 21:46:59.566 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 27/27 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:47:00.067 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 21:47:00.873 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2406)
+2026-07-06 21:47:00.874 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/25 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:47:01.376 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_214701.json
+2026-07-06 21:47:01.376 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 21:47:01.384 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #4 complete: 8/8 success
+2026-07-06 21:51:50.377 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #5 starting...
+2026-07-06 21:51:50.378 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 21:51:50.378 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 21:51:50.379 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 21:51:50.381 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 21:51:51.331 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2415)
+2026-07-06 21:51:51.332 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 31/36 km/h (86.1%) | Congestion ratio: 0.861
+2026-07-06 21:51:51.832 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 21:51:52.744 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2416)
+2026-07-06 21:51:52.745 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:51:53.246 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 21:51:54.081 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2417)
+2026-07-06 21:51:54.081 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:51:54.582 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 21:51:55.594 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2418)
+2026-07-06 21:51:55.595 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 31/36 km/h (86.1%) | Congestion ratio: 0.861
+2026-07-06 21:51:56.097 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 21:51:56.904 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2419)
+2026-07-06 21:51:56.905 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:51:57.406 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 21:51:58.241 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2420)
+2026-07-06 21:51:58.243 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 23/26 km/h (88.5%) | Congestion ratio: 0.885
+2026-07-06 21:51:58.744 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 21:51:59.593 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2421)
+2026-07-06 21:51:59.593 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 27/27 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:52:00.094 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 21:52:01.120 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2422)
+2026-07-06 21:52:01.121 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/25 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:52:01.622 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_215201.json
+2026-07-06 21:52:01.623 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 21:52:01.628 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #5 complete: 8/8 success
+2026-07-06 21:56:50.386 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #6 starting...
+2026-07-06 21:56:50.386 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 21:56:50.386 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 21:56:50.387 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 21:56:50.387 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 21:56:51.376 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2431)
+2026-07-06 21:56:51.377 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 30/36 km/h (83.3%) | Congestion ratio: 0.833
+2026-07-06 21:56:51.878 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 21:56:52.728 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2432)
+2026-07-06 21:56:52.728 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:56:53.229 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 21:56:54.037 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2433)
+2026-07-06 21:56:54.038 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:56:54.540 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 21:56:55.520 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2434)
+2026-07-06 21:56:55.522 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 30/36 km/h (83.3%) | Congestion ratio: 0.833
+2026-07-06 21:56:56.024 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 21:56:56.851 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2435)
+2026-07-06 21:56:56.852 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:56:57.354 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 21:56:58.180 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2436)
+2026-07-06 21:56:58.181 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 24/25 km/h (96.0%) | Congestion ratio: 0.96
+2026-07-06 21:56:58.682 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 21:56:59.478 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2437)
+2026-07-06 21:56:59.479 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 22/26 km/h (84.6%) | Congestion ratio: 0.846
+2026-07-06 21:56:59.981 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 21:57:00.790 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2438)
+2026-07-06 21:57:00.791 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/25 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 21:57:01.300 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_215701.json
+2026-07-06 21:57:01.301 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 21:57:01.305 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #6 complete: 8/8 success
+2026-07-06 22:01:50.381 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #7 starting...
+2026-07-06 22:01:50.382 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 22:01:50.382 | INFO     | scheduler:job_collect_weather:114 | 🌤️ Weather collection #3 starting...
+2026-07-06 22:01:50.384 | INFO     | scheduler:job_collect_air_quality:135 | 🌬️ Air quality collection #2 starting...
+2026-07-06 22:01:50.385 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 22:01:50.383 | INFO     | scheduler:job_print_stats:154 | 
+2026-07-06 22:01:50.385 | INFO     | realtime_collector:collect_weather:186 | ==================================================
+2026-07-06 22:01:50.386 | INFO     | realtime_collector:collect_air_quality:284 | ==================================================
+2026-07-06 22:01:50.387 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 22:01:50.388 | INFO     | scheduler:job_print_stats:155 | =======================================================
+2026-07-06 22:01:50.389 | INFO     | realtime_collector:collect_weather:187 | COLLECTING WEATHER DATA (OpenWeatherMap)
+2026-07-06 22:01:50.390 | INFO     | realtime_collector:collect_air_quality:285 | COLLECTING AIR QUALITY DATA (OpenWeatherMap)
+2026-07-06 22:01:50.392 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 22:01:50.396 | INFO     | scheduler:job_print_stats:156 | 📊 SCHEDULER STATISTICS
+2026-07-06 22:01:50.396 | INFO     | realtime_collector:collect_weather:188 | ==================================================
+2026-07-06 22:01:50.397 | INFO     | realtime_collector:collect_air_quality:286 | ==================================================
+2026-07-06 22:01:50.397 | INFO     | scheduler:job_print_stats:157 | =======================================================
+2026-07-06 22:01:50.399 | INFO     | scheduler:job_print_stats:158 |   Uptime: 0:30:00.046313
+2026-07-06 22:01:50.399 | INFO     | scheduler:job_print_stats:159 |   Traffic:     7 runs | 48 points OK | 0 points failed
+2026-07-06 22:01:50.398 | INFO     | realtime_collector:collect_weather:201 |   Querying weather for center: (12.905, 77.725)
+2026-07-06 22:01:50.399 | INFO     | realtime_collector:collect_air_quality:299 |   Querying air quality for center: (12.905, 77.725)
+2026-07-06 22:01:50.400 | INFO     | scheduler:job_print_stats:162 |   Weather:     3 runs | 2 OK | 0 failed
+2026-07-06 22:01:50.403 | INFO     | scheduler:job_print_stats:165 |   Air Quality: 2 runs | 1 OK | 0 failed
+2026-07-06 22:01:50.404 | INFO     | scheduler:job_print_stats:168 | =======================================================
+2026-07-06 22:01:50.405 | INFO     | scheduler:job_print_stats:169 | 
+2026-07-06 22:01:50.618 | DEBUG    | operations:insert_air_quality_reading:265 | AQI reading inserted (ID: 68)
+2026-07-06 22:01:50.619 | INFO     | realtime_collector:collect_air_quality:342 |     ✅ AQI: 1 (Good) | PM2.5: 3.5 | PM10: 6.53 | NO2: 5.89 | O3: 41.12
+2026-07-06 22:01:50.620 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: air_quality_20260706_220150.json
+2026-07-06 22:01:50.621 | INFO     | scheduler:job_collect_air_quality:140 | 🌬️ Air quality collection #2 complete: ✅ Success
+2026-07-06 22:01:50.794 | DEBUG    | operations:insert_weather_reading:212 | Weather reading inserted (ID: 118)
+2026-07-06 22:01:50.795 | INFO     | realtime_collector:collect_weather:235 |     ✅ Temp: 22.53°C | Humidity: 88% | Wind: 8.31 m/s | Desc: overcast clouds
+2026-07-06 22:01:50.796 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: weather_20260706_220150.json
+2026-07-06 22:01:50.797 | INFO     | scheduler:job_collect_weather:119 | 🌤️ Weather collection #3 complete: ✅ Success
+2026-07-06 22:01:51.456 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2447)
+2026-07-06 22:01:51.457 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:01:51.957 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 22:01:52.796 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2448)
+2026-07-06 22:01:52.796 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:01:53.297 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 22:01:54.147 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2449)
+2026-07-06 22:01:54.147 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:01:54.648 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 22:01:55.609 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2450)
+2026-07-06 22:01:55.610 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:01:56.112 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 22:01:56.946 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2451)
+2026-07-06 22:01:56.946 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:01:57.447 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 22:01:58.292 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2452)
+2026-07-06 22:01:58.293 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/26 km/h (96.2%) | Congestion ratio: 0.962
+2026-07-06 22:01:58.793 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 22:01:59.747 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2453)
+2026-07-06 22:01:59.748 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 22/27 km/h (81.5%) | Congestion ratio: 0.815
+2026-07-06 22:02:00.248 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 22:02:01.154 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2454)
+2026-07-06 22:02:01.154 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/25 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:02:01.660 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_220201.json
+2026-07-06 22:02:01.661 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 22:02:01.667 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #7 complete: 8/8 success
+2026-07-06 22:06:50.374 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #8 starting...
+2026-07-06 22:06:50.376 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 22:06:50.377 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 22:06:50.377 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 22:06:50.377 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 22:06:51.376 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2463)
+2026-07-06 22:06:51.377 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:06:51.878 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 22:06:52.680 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2464)
+2026-07-06 22:06:52.681 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:06:53.181 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 22:06:53.969 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2465)
+2026-07-06 22:06:53.970 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:06:54.471 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 22:06:55.402 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2466)
+2026-07-06 22:06:55.402 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:06:55.903 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 22:06:56.779 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2467)
+2026-07-06 22:06:56.779 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:06:57.280 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 22:06:58.126 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2468)
+2026-07-06 22:06:58.126 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/26 km/h (96.2%) | Congestion ratio: 0.962
+2026-07-06 22:06:58.627 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 22:06:59.452 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2469)
+2026-07-06 22:06:59.454 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 27/27 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:06:59.957 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 22:07:00.774 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2470)
+2026-07-06 22:07:00.775 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/25 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:07:01.279 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_220701.json
+2026-07-06 22:07:01.279 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 22:07:01.280 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #8 complete: 8/8 success
+2026-07-06 22:11:50.388 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #9 starting...
+2026-07-06 22:11:50.390 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 22:11:50.393 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 22:11:50.396 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 22:11:50.398 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 22:11:51.467 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2479)
+2026-07-06 22:11:51.468 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:11:51.969 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 22:11:52.825 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2480)
+2026-07-06 22:11:52.825 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:11:53.325 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 22:11:54.153 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2481)
+2026-07-06 22:11:54.154 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:11:54.655 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 22:11:55.604 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2482)
+2026-07-06 22:11:55.604 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:11:56.105 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 22:11:56.908 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2483)
+2026-07-06 22:11:56.909 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:11:57.409 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 22:11:58.196 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2484)
+2026-07-06 22:11:58.199 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 24/26 km/h (92.3%) | Congestion ratio: 0.923
+2026-07-06 22:11:58.700 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 22:11:59.514 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2485)
+2026-07-06 22:11:59.515 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 27/27 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:12:00.015 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 22:12:01.061 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2486)
+2026-07-06 22:12:01.062 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 17/25 km/h (68.0%) | Congestion ratio: 0.68
+2026-07-06 22:12:01.565 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_221201.json
+2026-07-06 22:12:01.567 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 22:12:01.570 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #9 complete: 8/8 success
+2026-07-06 22:16:50.389 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #10 starting...
+2026-07-06 22:16:50.392 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 22:16:50.390 | INFO     | scheduler:job_collect_weather:114 | 🌤️ Weather collection #4 starting...
+2026-07-06 22:16:50.396 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 22:16:50.397 | INFO     | realtime_collector:collect_weather:186 | ==================================================
+2026-07-06 22:16:50.399 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 22:16:50.401 | INFO     | realtime_collector:collect_weather:187 | COLLECTING WEATHER DATA (OpenWeatherMap)
+2026-07-06 22:16:50.403 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 22:16:50.403 | INFO     | realtime_collector:collect_weather:188 | ==================================================
+2026-07-06 22:16:50.403 | INFO     | realtime_collector:collect_weather:201 |   Querying weather for center: (12.905, 77.725)
+2026-07-06 22:16:50.813 | DEBUG    | operations:insert_weather_reading:212 | Weather reading inserted (ID: 120)
+2026-07-06 22:16:50.814 | INFO     | realtime_collector:collect_weather:235 |     ✅ Temp: 22.53°C | Humidity: 89% | Wind: 8.21 m/s | Desc: overcast clouds
+2026-07-06 22:16:50.815 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: weather_20260706_221650.json
+2026-07-06 22:16:50.816 | INFO     | scheduler:job_collect_weather:119 | 🌤️ Weather collection #4 complete: ✅ Success
+2026-07-06 22:16:51.410 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2495)
+2026-07-06 22:16:51.410 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:16:51.911 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 22:16:52.823 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2496)
+2026-07-06 22:16:52.824 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:16:53.325 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 22:16:54.204 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2497)
+2026-07-06 22:16:54.205 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:16:54.705 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 22:16:55.753 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2498)
+2026-07-06 22:16:55.754 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:16:56.254 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 22:16:57.215 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2499)
+2026-07-06 22:16:57.215 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:16:57.716 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 22:16:58.559 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2500)
+2026-07-06 22:16:58.560 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/26 km/h (96.2%) | Congestion ratio: 0.962
+2026-07-06 22:16:59.060 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 22:16:59.924 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2501)
+2026-07-06 22:16:59.924 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 27/27 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:17:00.425 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 22:17:01.304 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2502)
+2026-07-06 22:17:01.305 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/25 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:17:01.806 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_221701.json
+2026-07-06 22:17:01.806 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 22:17:01.808 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #10 complete: 8/8 success
+2026-07-06 22:21:50.373 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #11 starting...
+2026-07-06 22:21:50.373 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 22:21:50.374 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 22:21:50.374 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 22:21:50.374 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 22:21:51.501 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2511)
+2026-07-06 22:21:51.502 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:21:52.002 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 22:21:52.884 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2512)
+2026-07-06 22:21:52.884 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:21:53.385 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 22:21:54.282 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2513)
+2026-07-06 22:21:54.282 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:21:54.784 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 22:21:55.828 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2514)
+2026-07-06 22:21:55.829 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:21:56.330 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 22:21:57.190 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2515)
+2026-07-06 22:21:57.191 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:21:57.691 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 22:21:58.614 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2516)
+2026-07-06 22:21:58.615 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 24/26 km/h (92.3%) | Congestion ratio: 0.923
+2026-07-06 22:21:59.116 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 22:22:00.080 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2517)
+2026-07-06 22:22:00.081 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 27/27 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:22:00.582 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 22:22:01.696 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2518)
+2026-07-06 22:22:01.697 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/25 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:22:02.199 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_222202.json
+2026-07-06 22:22:02.200 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 22:22:02.201 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #11 complete: 8/8 success
+2026-07-06 22:26:50.371 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #12 starting...
+2026-07-06 22:26:50.373 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 22:26:50.373 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 22:26:50.374 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 22:26:50.376 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 22:26:51.563 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2527)
+2026-07-06 22:26:51.564 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:26:52.065 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 22:26:52.887 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2528)
+2026-07-06 22:26:52.888 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:26:53.389 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 22:26:54.359 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2529)
+2026-07-06 22:26:54.360 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:26:54.861 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 22:26:55.901 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2530)
+2026-07-06 22:26:55.901 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:26:56.402 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 22:26:57.291 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2531)
+2026-07-06 22:26:57.292 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:26:57.792 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 22:26:58.644 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2532)
+2026-07-06 22:26:58.645 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 24/26 km/h (92.3%) | Congestion ratio: 0.923
+2026-07-06 22:26:59.146 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 22:27:00.016 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2533)
+2026-07-06 22:27:00.017 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 27/27 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:27:00.519 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 22:27:01.429 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2534)
+2026-07-06 22:27:01.430 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 25/25 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:27:01.932 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_222701.json
+2026-07-06 22:27:01.932 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 22:27:01.933 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #12 complete: 8/8 success
+2026-07-06 22:31:50.377 | INFO     | scheduler:job_collect_traffic:88 | 🚗 Traffic collection #13 starting...
+2026-07-06 22:31:50.378 | INFO     | scheduler:job_collect_weather:114 | 🌤️ Weather collection #5 starting...
+2026-07-06 22:31:50.378 | INFO     | scheduler:job_print_stats:154 | 
+2026-07-06 22:31:50.378 | INFO     | scheduler:job_collect_air_quality:135 | 🌬️ Air quality collection #3 starting...
+2026-07-06 22:31:50.379 | INFO     | realtime_collector:collect_air_quality:284 | ==================================================
+2026-07-06 22:31:50.379 | INFO     | realtime_collector:collect_air_quality:285 | COLLECTING AIR QUALITY DATA (OpenWeatherMap)
+2026-07-06 22:31:50.379 | INFO     | realtime_collector:collect_air_quality:286 | ==================================================
+2026-07-06 22:31:50.378 | INFO     | realtime_collector:collect_traffic:57 | ==================================================
+2026-07-06 22:31:50.378 | INFO     | realtime_collector:collect_weather:186 | ==================================================
+2026-07-06 22:31:50.379 | INFO     | scheduler:job_print_stats:155 | =======================================================
+2026-07-06 22:31:50.380 | INFO     | realtime_collector:collect_air_quality:299 |   Querying air quality for center: (12.905, 77.725)
+2026-07-06 22:31:50.380 | INFO     | realtime_collector:collect_traffic:58 | COLLECTING TRAFFIC DATA (TomTom)
+2026-07-06 22:31:50.380 | INFO     | realtime_collector:collect_weather:187 | COLLECTING WEATHER DATA (OpenWeatherMap)
+2026-07-06 22:31:50.381 | INFO     | realtime_collector:collect_weather:188 | ==================================================
+2026-07-06 22:31:50.382 | INFO     | realtime_collector:collect_weather:201 |   Querying weather for center: (12.905, 77.725)
+2026-07-06 22:31:50.380 | INFO     | scheduler:job_print_stats:156 | 📊 SCHEDULER STATISTICS
+2026-07-06 22:31:50.381 | INFO     | realtime_collector:collect_traffic:59 | ==================================================
+2026-07-06 22:31:50.384 | INFO     | scheduler:job_print_stats:157 | =======================================================
+2026-07-06 22:31:50.385 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_road_junction (12.9165, 77.675)
+2026-07-06 22:31:50.385 | INFO     | scheduler:job_print_stats:158 |   Uptime: 1:00:00.041032
+2026-07-06 22:31:50.386 | INFO     | scheduler:job_print_stats:159 |   Traffic:     13 runs | 96 points OK | 0 points failed
+2026-07-06 22:31:50.388 | INFO     | scheduler:job_print_stats:162 |   Weather:     5 runs | 4 OK | 0 failed
+2026-07-06 22:31:50.388 | INFO     | scheduler:job_print_stats:165 |   Air Quality: 3 runs | 2 OK | 0 failed
+2026-07-06 22:31:50.388 | INFO     | scheduler:job_print_stats:168 | =======================================================
+2026-07-06 22:31:50.389 | INFO     | scheduler:job_print_stats:169 | 
+2026-07-06 22:31:50.599 | DEBUG    | operations:insert_air_quality_reading:265 | AQI reading inserted (ID: 70)
+2026-07-06 22:31:50.600 | INFO     | realtime_collector:collect_air_quality:342 |     ✅ AQI: 1 (Good) | PM2.5: 3.5 | PM10: 6.53 | NO2: 5.89 | O3: 41.12
+2026-07-06 22:31:50.601 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: air_quality_20260706_223150.json
+2026-07-06 22:31:50.601 | INFO     | scheduler:job_collect_air_quality:140 | 🌬️ Air quality collection #3 complete: ✅ Success
+2026-07-06 22:31:50.818 | DEBUG    | operations:insert_weather_reading:212 | Weather reading inserted (ID: 122)
+2026-07-06 22:31:50.819 | INFO     | realtime_collector:collect_weather:235 |     ✅ Temp: 22.53°C | Humidity: 89% | Wind: 8.21 m/s | Desc: overcast clouds
+2026-07-06 22:31:50.821 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: weather_20260706_223150.json
+2026-07-06 22:31:50.823 | INFO     | scheduler:job_collect_weather:119 | 🌤️ Weather collection #5 complete: ✅ Success
+2026-07-06 22:31:51.465 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_road_junction (ID: 2543)
+2026-07-06 22:31:51.466 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:31:51.966 | INFO     | realtime_collector:collect_traffic:77 |   Querying: dommasandra_circle (12.8832, 77.7524)
+2026-07-06 22:31:52.850 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: dommasandra_circle (ID: 2544)
+2026-07-06 22:31:52.851 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:31:53.352 | INFO     | realtime_collector:collect_traffic:77 |   Querying: chembenahalli (12.8793, 77.7616)
+2026-07-06 22:31:54.178 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: chembenahalli (ID: 2545)
+2026-07-06 22:31:54.178 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:31:54.680 | INFO     | realtime_collector:collect_traffic:77 |   Querying: varthur_gunjur_junction (12.9265, 77.7377)
+2026-07-06 22:31:55.783 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: varthur_gunjur_junction (ID: 2546)
+2026-07-06 22:31:55.784 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 36/36 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:31:56.284 | INFO     | realtime_collector:collect_traffic:77 |   Querying: sarjapur_town_center (12.86, 77.786)
+2026-07-06 22:31:57.176 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: sarjapur_town_center (ID: 2547)
+2026-07-06 22:31:57.177 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 38/38 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:31:57.677 | INFO     | realtime_collector:collect_traffic:77 |   Querying: carmelaram_junction (12.9125, 77.7056)
+2026-07-06 22:31:58.553 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: carmelaram_junction (ID: 2548)
+2026-07-06 22:31:58.554 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 24/26 km/h (92.3%) | Congestion ratio: 0.923
+2026-07-06 22:31:59.054 | INFO     | realtime_collector:collect_traffic:77 |   Querying: harlur_road_junction (12.908, 77.676)
+2026-07-06 22:31:59.969 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: harlur_road_junction (ID: 2549)
+2026-07-06 22:31:59.970 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 27/27 km/h (100.0%) | Congestion ratio: 1.0
+2026-07-06 22:32:00.471 | INFO     | realtime_collector:collect_traffic:77 |   Querying: iblur_wipro_junction (12.9209, 77.6653)
+2026-07-06 22:32:01.344 | DEBUG    | operations:insert_traffic_reading:159 | Traffic reading inserted: iblur_wipro_junction (ID: 2550)
+2026-07-06 22:32:01.345 | INFO     | realtime_collector:collect_traffic:120 |     ✅ Speed: 20/25 km/h (80.0%) | Congestion ratio: 0.8
+2026-07-06 22:32:01.847 | DEBUG    | realtime_collector:_save_snapshot:42 | Snapshot saved: traffic_20260706_223201.json
+2026-07-06 22:32:01.847 | INFO     | realtime_collector:collect_traffic:166 |   Traffic collection done: 8 success, 0 failed
+2026-07-06 22:32:01.848 | INFO     | scheduler:job_collect_traffic:94 | 🚗 Traffic collection #13 complete: 8/8 success
